@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[Brand Name] — Coaching & Gym Apparel</title>
+  <meta name="description" content="Personal training programs and gym apparel by [Sister’s Name]." />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-slate-900">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold">[Brand Name]</a>
+      <nav class="hidden md:flex gap-6">
+        <a href="#coaching" class="hover:opacity-70">Coaching</a>
+        <a href="#shop" class="hover:opacity-70">Shop</a>
+        <a href="#about" class="hover:opacity-70">About</a>
+        <a href="#contact" class="hover:opacity-70">Contact</a>
+      </nav>
+      <a href="#shop" class="md:inline-flex hidden px-4 py-2 rounded-xl border">Shop Now</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        Train with Confidence. Wear with Purpose.
+      </h1>
+      <p class="mt-4 text-slate-600">
+        Programs that get results—and apparel built for the grind.
+      </p>
+      <div class="mt-6 flex gap-3">
+        <a href="#coaching" class="px-5 py-3 rounded-xl bg-black text-white">Start Coaching</a>
+        <a href="#shop" class="px-5 py-3 rounded-xl border">Shop Apparel</a>
+      </div>
+    </div>
+    <div class="aspect-[4/3] bg-slate-100 rounded-2xl"></div>
+  </section>
+
+  <!-- Coaching -->
+  <section id="coaching" class="bg-slate-50 border-y">
+    <div class="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-3 gap-6">
+      <div class="md:col-span-2">
+        <h2 class="text-3xl font-bold">1:1 Coaching & Programs</h2>
+        <p class="mt-2 text-slate-600">
+          Custom plans, weekly check-ins, and habit tracking via Kahunas.
+        </p>
+        <ul class="mt-4 list-disc pl-5 text-slate-700 space-y-1">
+          <li>Personalized training & macros</li>
+          <li>Form feedback & progress tracking</li>
+          <li>Flexible scheduling</li>
+        </ul>
+        <!-- Replace with your Kahunas coaching link -->
+        <a href="https://your-kahunas-link.example"
+           class="inline-block mt-6 px-5 py-3 rounded-xl bg-black text-white">Book on Kahunas</a>
+      </div>
+      <div class="rounded-2xl bg-white p-6 border">
+        <h3 class="font-semibold">Quick Links</h3>
+        <div class="mt-3 grid gap-2">
+          <a class="underline" href="https://your-kahunas-link.example">Kahunas Client Portal</a>
+          <a class="underline" href="#contact">Ask a question</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop -->
+  <section id="shop" class="max-w-6xl mx-auto px-4 py-14">
+    <h2 class="text-3xl font-bold">Featured Apparel</h2>
+    <p class="mt-2 text-slate-600">Secure checkout via Stripe.</p>
+
+    <!-- Product cards: each button points to a Stripe Payment Link or Checkout URL -->
+    <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article class="border rounded-2xl p-4">
+        <div class="aspect-square bg-slate-100 rounded-xl"></div>
+        <h3 class="mt-3 font-semibold">Performance Tee</h3>
+        <p class="text-slate-600">$28.00</p>
+        <a href="https://buy.stripe.com/your-payment-link-tee"
+           class="mt-3 inline-block px-4 py-2 rounded-xl bg-black text-white">Buy with Stripe</a>
+      </article>
+
+      <article class="border rounded-2xl p-4">
+        <div class="aspect-square bg-slate-100 rounded-xl"></div>
+        <h3 class="mt-3 font-semibold">Seamless Leggings</h3>
+        <p class="text-slate-600">$45.00</p>
+        <a href="https://buy.stripe.com/your-payment-link-leggings"
+           class="mt-3 inline-block px-4 py-2 rounded-xl bg-black text-white">Buy with Stripe</a>
+      </article>
+
+      <article class="border rounded-2xl p-4">
+        <div class="aspect-square bg-slate-100 rounded-xl"></div>
+        <h3 class="mt-3 font-semibold">Cropped Hoodie</h3>
+        <p class="text-slate-600">$52.00</p>
+        <a href="https://buy.stripe.com/your-payment-link-hoodie"
+           class="mt-3 inline-block px-4 py-2 rounded-xl bg-black text-white">Buy with Stripe</a>
+      </article>
+    </div>
+
+    <p class="mt-4 text-sm text-slate-500">
+      Shipping & returns info at checkout.
+    </p>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="bg-slate-50 border-y">
+    <div class="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-2 gap-10 items-center">
+      <div class="aspect-[16/10] bg-slate-100 rounded-2xl"></div>
+      <div>
+        <h2 class="text-3xl font-bold">Meet [Sister’s Name]</h2>
+        <p class="mt-3 text-slate-600">
+          Certified trainer helping clients build strength and confidence, on and off the gym floor.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Email capture -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 py-14">
+    <h2 class="text-3xl font-bold">Questions? Let’s talk.</h2>
+    <form action="https://formspree.io/f/your-id" method="POST" class="mt-6 grid gap-3 max-w-md">
+      <input class="border rounded-xl px-4 py-3" name="name" placeholder="Your name" required />
+      <input class="border rounded-xl px-4 py-3" name="email" type="email" placeholder="Email" required />
+      <textarea class="border rounded-xl px-4 py-3" name="message" rows="4" placeholder="How can we help?"></textarea>
+      <button class="px-5 py-3 rounded-xl bg-black text-white">Send</button>
+    </form>
+    <p class="mt-4 text-xs text-slate-500">By submitting, you agree to our <a class="underline" href="/privacy.html">Privacy Policy</a>.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-slate-500 flex flex-wrap gap-4 justify-between">
+      <span>© <span id="year"></span> [Brand Name]. All rights reserved.</span>
+      <div class="flex gap-4">
+        <a class="underline" href="/privacy.html">Privacy</a>
+        <a class="underline" href="/terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
