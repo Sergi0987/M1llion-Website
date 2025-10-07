@@ -1,0 +1,18 @@
+/* Custom font (example) */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Smooth transition for hover effects */
+a, button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 10px;
+}

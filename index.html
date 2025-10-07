@@ -6,6 +6,10 @@
   <title>M1llion — Coaching & Gym Apparel</title>
   <meta name="description" content="Personal training programs and gym apparel by Carolina." />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://app.snipcart.com">
+  <link rel="preconnect" href="https://cdn.snipcart.com">
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.6.0/default/snipcart.css" />
+  <script async src="https://cdn.snipcart.com/themes/v3.6.0/default/snipcart.js"></script>
 </head>
 <body class="bg-white text-slate-900">
   <!-- Header -->
@@ -19,6 +23,9 @@
         <a href="#contact" class="hover:opacity-70">Contact</a>
       </nav>
       <a href="#shop" class="md:inline-flex hidden px-4 py-2 rounded-xl border">Shop Now</a>
+      <button id="cart-btn" class="inline-flex px-4 py-2 rounded-xl border" aria-label="Open cart">
+        Cart (<span class="snipcart-items-count">0</span>)
+      </button>
     </div>
   </header>
 
@@ -77,24 +84,51 @@
         <div class="aspect-square bg-slate-100 rounded-xl"></div>
         <h3 class="mt-3 font-semibold">Performance Tee</h3>
         <p class="text-slate-600">$28.00</p>
-        <a href="https://buy.stripe.com/your-payment-link-tee"
-           class="mt-3 inline-block px-4 py-2 rounded-xl bg-black text-white">Buy with Stripe</a>
+        <button
+          class="mt-3 inline-block px-4 py-2 rounded-xl bg-black text-white snipcart-add-item"
+          data-item-id="perf-tee-001"
+          data-item-name="Performance Tee"
+          data-item-price="28.00"
+          data-item-url="/"
+          data-item-description="Moisture-wicking training tee"
+          data-item-image="/images/performance-tee.jpg"
+        >
+          Add to Cart
+        </button>
       </article>
 
       <article class="border rounded-2xl p-4">
         <div class="aspect-square bg-slate-100 rounded-xl"></div>
         <h3 class="mt-3 font-semibold">Seamless Leggings</h3>
         <p class="text-slate-600">$45.00</p>
-        <a href="https://buy.stripe.com/your-payment-link-leggings"
-           class="mt-3 inline-block px-4 py-2 rounded-xl bg-black text-white">Buy with Stripe</a>
+        <button
+          class="mt-3 inline-block px-4 py-2 rounded-xl bg-black text-white snipcart-add-item"
+          data-item-id="leggings-001"
+          data-item-name="Seamless Leggings"
+          data-item-price="45.00"
+          data-item-url="/"
+          data-item-description="High-waist seamless leggings"
+          data-item-image="/images/seamless-leggings.jpg"
+        >
+          Add to Cart
+        </button>
       </article>
 
       <article class="border rounded-2xl p-4">
         <div class="aspect-square bg-slate-100 rounded-xl"></div>
         <h3 class="mt-3 font-semibold">Cropped Hoodie</h3>
         <p class="text-slate-600">$52.00</p>
-        <a href="https://buy.stripe.com/your-payment-link-hoodie"
-           class="mt-3 inline-block px-4 py-2 rounded-xl bg-black text-white">Buy with Stripe</a>
+        <button
+          class="mt-3 inline-block px-4 py-2 rounded-xl bg-black text-white snipcart-add-item"
+          data-item-id="cropped-hoodie-001"
+          data-item-name="Cropped Hoodie"
+          data-item-price="52.00"
+          data-item-url="/"
+          data-item-description="Soft fleece cropped hoodie"
+          data-item-image="/images/cropped-hoodie.jpg"
+        >
+          Add to Cart
+        </button>
       </article>
     </div>
 
@@ -142,5 +176,11 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <!-- Snipcart modal root (replace YOUR_PUBLIC_API_KEY with your real key) -->
+  <div hidden id="snipcart"
+       data-api-key="YOUR_PUBLIC_API_KEY"
+       data-config-modal-style="side"
+       data-config-add-product-behavior="none"></div>
+  <script src="./main.js"></script>
 </body>
 </html>
