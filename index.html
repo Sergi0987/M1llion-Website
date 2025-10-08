@@ -153,7 +153,10 @@
   <!-- Contact / Email capture -->
   <section id="contact" class="max-w-6xl mx-auto px-4 py-14">
     <h2 class="text-3xl font-bold">Questions? Let’s talk.</h2>
-    <form action="https://formspree.io/f/your-id" method="POST" class="mt-6 grid gap-3 max-w-md">
+    <form action="https://formspree.io/f/xzzjagqp" method="POST" class="mt-6 grid gap-3 max-w-md" accept-charset="UTF-8">
+      <input type="hidden" name="_subject" value="New contact from M1llion site" />
+      <!-- Honeypot to reduce spam -->
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
       <input class="border rounded-xl px-4 py-3" name="name" placeholder="Your name" required />
       <input class="border rounded-xl px-4 py-3" name="email" type="email" placeholder="Email" required />
       <textarea class="border rounded-xl px-4 py-3" name="message" rows="4" placeholder="How can we help?"></textarea>
@@ -181,6 +184,6 @@
        data-api-key="YOUR_PUBLIC_API_KEY"
        data-config-modal-style="side"
        data-config-add-product-behavior="none"></div>
-  <script src="./main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

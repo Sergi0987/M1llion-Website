@@ -86,3 +86,57 @@ document.addEventListener('snipcart.ready', () => {
     } catch (_) {}
   });
 })();
+
+// --- Ensure cart toggle works consistently across all screen sizes ---
+(function () {
+  const cartBtn = document.getElementById('cart-btn');
+  if (!cartBtn) return;
+
+  // Track open/close state
+  let cartOpen = false;
+
+  // Helper to close cart
+  function closeCart() {
+    try {
+      window.Snipcart.api.theme.cart.close();
+    } catch (_) {
+      const closeBtn = document.querySelector('[data-action="close-cart"], .snipcart-cart__close');
+      if (closeBtn) closeBtn.click();
+    }
+  }
+
+  // Helper to open cart
+  function openCart() {
+    try {
+      window.Snipcart.api.theme.cart.open();
+    } catch (_) {
+      cartBtn.classList.add('snipcart-checkout');
+      cartBtn.click();
+      cartBtn.classList.remove('snipcart-checkout');
+    }
+  }
+
+  cartBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const ready = !!(window.Snipcart && window.Snipcart.api && window.Snipcart.store);
+    if (!ready) {
+      console.warn('Cart not ready yet.');
+      return;
+    }
+
+    if (cartOpen) {
+      closeCart();
+    } else {
+      openCart();
+    }
+  });
+
+  // Keep state in sync with Snipcart events
+  document.addEventListener('snipcart.ready', () => {
+    try {
+      window.Snipcart.events.on('cart.opened', () => { cartOpen = true; });
+      window.Snipcart.events.on('cart.closed', () => { cartOpen = false; });
+    } catch (_) {}
+  });
+})();
